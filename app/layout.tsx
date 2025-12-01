@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Playfair_Display } from "next/font/google"
 import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 import { IntroOverlay } from "@/components/intro-overlay"
 import { Suspense } from "react"
 import { AIChatbot } from "@/components/ai-chatbot"
@@ -17,9 +18,9 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "Kinn",
+  description: "Probate Services",
+  generator: "",
 }
 
 export default function RootLayout({
@@ -34,6 +35,7 @@ export default function RootLayout({
           <IntroOverlay />
           <SiteHeader />
           {children}
+          <SiteFooter />
         </Suspense>
         <AIChatbot />
         <Analytics />
